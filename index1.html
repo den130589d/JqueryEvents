@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text"> <br>
+	<button class="one">a</button>
+	<button class="one">w</button>
+	<button class="one">d</button>
+	<button class="one">s</button>
+	<button class="two">Backspace</button>
+
+
+	
+
+	
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+		
+		$('.one').click(function () {
+			var $but = $(this).text();
+			var $inp = $('input').val();
+			$('input').val($inp + $but);
+		})
+
+		$('.two').click(function(){
+			var $strInp = $('input').val();
+			var $bs = $strInp.substring(0, $strInp.length - 1);
+			$('input').val($bs);
+
+		})
+	</script>
+</body>
+</html>

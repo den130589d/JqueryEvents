@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.bg{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, iste.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus tempore quidem, neque.</p>	
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+		<button id="save">Save</button>
+	
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+		
+		$('p').click(function() {
+			$('p').removeClass('bg');
+			$(this).toggleClass('bg');
+			$('textarea').focus().val($(this).text());
+
+
+			
+		});
+		$('button').click(function(){
+			var text = $('textarea').val();
+			$('.bg').text(text).removeClass('bg');
+			$('textarea').val('')
+
+			});
+
+		
+
+	</script>
+</body>
+</html>
